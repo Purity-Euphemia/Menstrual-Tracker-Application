@@ -8,6 +8,14 @@ import java.util.Map;
 public class CycleCalculatorService {
     public Map<String, LocalDate> calculateCycle(LocalDate lastPeriodStart, int cycleLength, int periodDuration) {
         Map<String, LocalDate> result = new HashMap<>();
+
+        LocalDate periodEnd = lastPeriodStart.plusDays(periodDuration - 1);
+        LocalDate nextPeriodStart = lastPeriodStart.plusDays(cycleLength);
+        LocalDate ovulationDay = lastPeriodStart.plusDays(cycleLength - 14);
+        LocalDate fertileStart = ovulationDay.minusDays(3);
+        LocalDate fertileEnd = ovulationDay.plusDays(3);
+        LocalDate safeStart = periodEnd.plusDays(1);
+        LocalDate safeEnd = fertileStart.minusDays(1);
     }
 
 }
