@@ -16,6 +16,15 @@ public class CycleCalculatorService {
         LocalDate fertileEnd = ovulationDay.plusDays(3);
         LocalDate safeStart = periodEnd.plusDays(1);
         LocalDate safeEnd = fertileStart.minusDays(1);
+
+        result.put("periodStart", lastPeriodStart);
+        result.put("periodEnd", periodEnd);
+        result.put("nextPeriodStart", nextPeriodStart);
+        result.put("ovulationDay", ovulationDay);
+        result.put("fertileStart", fertileStart);
+        result.put("fertileEnd", fertileEnd);
+        result.put("safeStart", safeStart);
+        result.put("safeEnd", safeEnd);
     }
 
 }
