@@ -24,4 +24,13 @@ public class UserCycle {
     private LocalDate lastPeriodStart;
     private int cycleLength;
     private int periodDuration;
+
+    private LocalDate nextPeriodStart;
+    private LocalDate periodEnd;
+    private LocalDate safeStart;
+    private LocalDate safeEnd;
+    private LocalDate ovulationDay;
+    private LocalDate fertileStart;
+    private LocalDate fertileEnd;
+
 }
