@@ -33,5 +33,5 @@ public class CycleCalculator {
             LocalDate safeStart,
             LocalDate safeEnd
     ) {}
-    
+
 }
