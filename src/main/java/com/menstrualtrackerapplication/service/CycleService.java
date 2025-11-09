@@ -38,7 +38,19 @@ public class CycleService {
 
         userCycleRepository.save(cycle);
 
-
-
-
+        return CycleResponse.builder()
+                .periodStart(calc.periodStart())
+                .periodEnd(calc.periodEnd())
+                .nextPeriodStart(calc.nextPeriodStart())
+                .ovulationDay(calc.ovulationDay())
+                .fertileStart(calc.fertileStart())
+                .fertileEnd(calc.fertileEnd())
+                .safeStart(calc.safeStart())
+                .safeEnd(calc.safeEnd())
+                .build();
     }
+
+
+
+
+}
