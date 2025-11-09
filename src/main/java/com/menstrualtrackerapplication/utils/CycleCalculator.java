@@ -12,6 +12,12 @@ public class CycleCalculator {
         return date.minusDays(days);
     }
     public static CycleDates calculateCycle(LocalDate start, int cycleLength, int duration){
-        LocalDate period
+        LocalDate periodEnd = addDays(start, duration - 1);
+        LocalDate nextPeriodStart = addDays(start, cycleLength);
+        LocalDate ovulationDay = addDays(start, cycleLength - 14);
+        LocalDate fertileStart = subtractDays(ovulationDay, 3);
+        LocalDate fertileEnd = addDays(ovulationDay, 3);
+        LocalDate safeStart = addDays(periodEnd, 1);
+        LocalDate safeEnd = subtractDays(fertileStart, 1);
     }
 }
