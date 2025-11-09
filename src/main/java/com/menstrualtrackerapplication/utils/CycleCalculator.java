@@ -19,5 +19,19 @@ public class CycleCalculator {
         LocalDate fertileEnd = addDays(ovulationDay, 3);
         LocalDate safeStart = addDays(periodEnd, 1);
         LocalDate safeEnd = subtractDays(fertileStart, 1);
+
+        return new CycleDates(start, periodEnd, nextPeriodStart, ovulationDay, fertileStart, fertileEnd, safeStart, safeEnd);
     }
+
+    public record CycleDates(
+            LocalDate periodStart,
+            LocalDate periodEnd,
+            LocalDate nextPeriodStart,
+            LocalDate ovulationDay,
+            LocalDate fertileStart,
+            LocalDate fertileEnd,
+            LocalDate safeStart,
+            LocalDate safeEnd
+    ) {}
+    
 }
